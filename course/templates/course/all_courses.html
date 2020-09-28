@@ -1,0 +1,34 @@
+{% extends "course/base.html" %}
+{% load static %}
+{% block content %}
+
+<div class="row justify-content-center my-3">
+  <div class="col-5">
+    <img src="{% static 'course/profile_Photo.jpg' %}" class="img-fluid">
+  </div>
+</div>
+
+<div class="row justify-content-center mb-3">
+  <div class="col-md-9 text-center">
+{#    <h1 id="hometext" class="font-weight-bold">Mounaf Alahmad is a co-founder of Kaizen Training center </h1>#}
+  </div>
+</div>
+<h1>Training Courses</h1>
+<hr>
+<div class="row">
+  {% for course in courses %}
+  <div class="col-lg-4 col-md-6">
+
+    <a href="{%  url "course:course_detail" course.id %}">
+    <a href="{%  url "course:course_detail" course.id %}">
+      <img src="{{ course.image.url }}" class="img-fluid mb-2">
+    </a>
+    <h4>{{ course.title }}</h4>
+    <p>Instructors: {{ course.Instructors }}</p>
+    <p>Prerequistes: {{ course.Prerequists }}</p>
+    <hr>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
+

@@ -33,6 +33,8 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'django.contrib.admin',
     'blog.apps.BlogConfig',
+    'phonenumber_field',
+    'course.apps.CourseConfig',
     'portfolio.apps.PortfolioConfig',
     'django.contrib.auth',
     'django.contrib.contenttypes',

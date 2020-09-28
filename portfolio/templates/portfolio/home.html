@@ -6,7 +6,7 @@
 
 <div class="row justify-content-center my-3">
   <div class="col-5">
-    <img src="{% static 'portfolio/profile_Photo.JPG' %}" class="img-fluid">
+    <img src="{% static 'portfolio/profile_Photo.jpg' %}" class="img-fluid">
   </div>
 </div>
 
@@ -15,10 +15,10 @@
     <h1 id="hometext" class="font-weight-bold">Mounaf Alahmad is a co-founder of Kaizen Training center </h1>
   </div>
 </div>
-
-<h2 class="mt-5">Portfolio</h2>
+<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+<h1>Portfolio</h1>  </a>
 <hr>
-<div class="row">
+<div class="row" class="collapse" id="collapseExample">
   {% for project in projects %}
   <div class="col-lg-4 col-md-6">
 
@@ -38,3 +38,4 @@
 </div>
 
 {% endblock %}
+

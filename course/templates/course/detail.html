@@ -1,0 +1,36 @@
+{% extends "course/base.html" %}
+{% load static %}
+{% block content %}
+
+<div class="row justify-content-center my-3">
+  <div class="col-5">
+    <img src= {{reqCourse.image.url}} class="img-fluid">
+  </div>
+</div>
+
+<div class="row justify-content-center mb-3">
+  <div class="col-md-9 text-center">
+  </div>
+</div>
+  <div class="col-md-9 text-center">
+<h1 id="hometext" class="font-weight-bold"  style="color:royalblue;">{{ reqCourse.title}} </h1>
+  </div>
+      <hr>
+     <h3  style="color:red;">Course Description</h3>
+    <p>{{ reqCourse.description }}</p>
+      <hr>
+    <h3  style="color:red;">Course Cost </h3>
+        <p>{{ reqCourse.cost }}</p>
+    <hr>
+      <h3  style="color:red;">Prerequistes</h3>
+    <p>{{ reqCourse.Prerequists }}</p>
+    <hr>
+      <h3  style="color:red;">Course Duration</h3>
+    <p> {{ reqCourse.duration }}</p>
+    <hr>
+    <h3  style="color:red;">Available Instructors </h3>
+    <p>{{ reqCourse.Instructors }}</p>
+
+  </div>
+
+{% endblock content %}
